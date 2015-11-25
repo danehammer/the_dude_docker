@@ -1,0 +1,13 @@
+redis:
+  image: redis
+  container_name: redis1
+  environment:
+    - "constraint:node==darkwing"
+
+hubot:
+  image: danehammer/the_dude
+  container_name: the_dude
+  environment:
+    - "constraint:node==hobo"
+    - "REDIS_URL=redis://redis1:6379"
+    - "HUBOT_SLACK_TOKEN"
