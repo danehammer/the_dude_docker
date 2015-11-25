@@ -10,7 +10,7 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 # increment this each time you want to force a rebuild of the following layers
-ENV cache_invalidating_dummy 1000000002
+ENV cache_invalidating_dummy 1000000003
 
 RUN git clone --depth=1 https://github.com/danehammer/the_dude_hubot.git ${BOTDIR}
 
